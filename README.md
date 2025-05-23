@@ -1,34 +1,58 @@
-# CitaMaya - Pendidikan Berbasis Game
+# CitaMaya - Text-based Educational MMORPG
 
-Dokumentasi proyek game edukasi berbasis teks dengan konsep "stealth learning".
+Platform belajar berbasis game dengan inspirasi:
+- **Gameplay**: Torn (text-based MMORPG)
+- **Pembelajaran**: Duolingo & Codecademy
+- **Komunitas**: Discord
 
-## Daftar Dokumen
+## Dokumen Inti
 
-1. **[Visi Proyek](vision.md)**  
-   Misi, filosofi, dan prinsip desain inti game
+1. **[Visi & Strategi](docs/vision.md)**  
+   - Filosofi "Belajar Tanpa Sadar Belajar"  
+   - Analisis kompetitif vs platform lain
+   - Roadmap pengembangan
 
-2. **[Desain Game](game-design.md)**  
-   Mekanika game, sistem progresi, dan struktur konten
+2. **[Desain Game](docs/game-design.md)**  
+   - 99 jalur belajar & karir  
+   - Sistem assessment multimodal  
+   - Mekanika text-based MMORPG
 
-3. **[Spesifikasi Teknis](tech-spec.md)**  
-   Arsitektur sistem, struktur data, dan API
-
-4. **[Player Journey](player-journey.md)**  
-   Contoh alur pemain dari awal sampai karir
-
-5. **[Roadmap](roadmap.md)**  
-   Timeline pengembangan dan fitur yang direncanakan
+3. **[Executive Brief](docs/business/executive-brief.md)**  
+   - Model bisnis dan monetisasi  
+   - Proyeksi pasar edtech  
+   - Strategi partnership
 
 ## Struktur Proyek
 ```
 /citamaya
-├── docs/               # Dokumentasi
-├── src/                # Kode sumber
-├── data/               # Konten game
-└── README.md           # Dokumen ini
+├── docs/
+│   ├── vision.md          # Dokumen visi dan strategi
+│   ├── game-design.md     # Spesifikasi gameplay
+│   ├── mvp-docs.md        # Spesifikasi teknis MVP
+│   ├── full-dev/          # [FUTURE] Dokumentasi pengembangan lengkap
+│   └── business/          # [FUTURE] Materi bisnis & partnership
+│
+├── src/                   # Kode sumber utama
+│   ├── app/               # Aplikasi Flask
+│   ├── static/            # Aset frontend (CSS, JS)
+│   └── templates/         # File template HTML
+│
+├── data/                  # Konten dan konfigurasi game
+│   ├── courses/           # Materi pembelajaran
+│   ├── assessments/       # Bank soal
+│   └── user_data/         # Data pemain (development)
+│
+├── tests/                 # Skrip testing
+├── scripts/               # Skrip utilitas
+└── README.md              # Dokumentasi utama
 ```
 
+**Keterangan Struktur**:
+1. `docs/` - Semua dokumentasi proyek
+2. `src/` - Kode implementasi utama
+3. `data/` - Konten game yang bisa diubah tanpa coding
+4. `tests/` - Untuk pengujian otomatis
+5. `scripts/` - Skrip bantu development
+
 ## Kontribusi
-1. Clone repository
-2. Buat branch baru (`feature/nama-fiturbaru`)
-3. Submit pull request
+Lihat [Panduan Kontribusi](CONTRIBUTING.md) untuk detail cara berkontribusi pada proyek ini.
