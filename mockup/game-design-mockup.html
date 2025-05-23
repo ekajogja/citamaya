@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitaMaya - Desain Game</title>
+    <!-- Bootswatch Vapor Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <style>
+        .path-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--bs-secondary);
+        }
+        .path-category {
+            font-weight: bold;
+            color: var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Persistent Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">CITAMAYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mockups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="game-design-mockup.html">Desain Game</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <i class="bi bi-person-circle"></i> Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h1 class="mb-0">Desain Game CitaMaya</h1>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <h2>Core Gameplay (Text-based MMORPG Edukasi)</h2>
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Inspirasi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Gameplay & UI</h6>
+                                            <p class="text-center"><i class="bi bi-controller" style="font-size: 2rem;"></i></p>
+                                            <p class="text-center">Torn (text-based MMORPG)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Assessment</h6>
+                                            <p class="text-center"><i class="bi bi-check-circle" style="font-size: 2rem;"></i></p>
+                                            <p class="text-center">Duolingo/Codecademy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Interaksi</h6>
+                                            <p class="text-center"><i class="bi bi-people" style="font-size: 2rem;"></i></p>
+                                            <p class="text-center">Discord</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Loop Utama Gameplay</h5>
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li><strong>Pemilihan Jalur:</strong> 99 jalur belajar dalam 9 kategori</li>
+                                <li><strong>Proses Belajar:</strong> Materi teks, video, referensi</li>
+                                <li><strong>Assessment:</strong> Kuis dengan passing grade 70%</li>
+                                <li><strong>Progresi:</strong> XP, unlock karir, badge achievement</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3>99 Jalur Belajar</h3>
+                    <div class="accordion mb-4" id="pathAccordion">
+                        <!-- Technology -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTech">
+                                    1. Teknologi (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseTech" class="accordion-collapse collapse show" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Teknologi Maritim</li>
+                                        <li>Teknologi Pertanian</li>
+                                        <li>Teknologi Konstruksi</li>
+                                        <li>Robotika</li>
+                                        <li>Kecerdasan Buatan</li>
+                                        <li>Blockchain</li>
+                                        <li>Internet of Things</li>
+                                        <li>Teknologi Transportasi</li>
+                                        <li>Teknologi Material</li>
+                                        <li>Teknologi Kedirgantaraan</li>
+                                        <li>Teknologi Nuklir</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business & Economy -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBiz">
+                                    2. Bisnis & Ekonomi (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseBiz" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Manajemen Startup</li>
+                                        <li>Fintech</li>
+                                        <li>E-commerce</li>
+                                        <li>Ekonomi Digital</li>
+                                        <li>Manajemen Rantai Pasok</li>
+                                        <li>Pemasaran Digital</li>
+                                        <li>Analisis Bisnis</li>
+                                        <li>Manajemen Keuangan</li>
+                                        <li>Kewirausahaan Sosial</li>
+                                        <li>Ekonomi Kreatif</li>
+                                        <li>Bisnis Internasional</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Environment & Energy -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnv">
+                                    3. Lingkungan & Energi (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseEnv" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Energi Terbarukan</li>
+                                        <li>Teknologi Lingkungan</li>
+                                        <li>Pengelolaan Sampah</li>
+                                        <li>Konservasi Alam</li>
+                                        <li>Teknologi Air Bersih</li>
+                                        <li>Manajemen Bencana</li>
+                                        <li>Arsitektur Hijau</li>
+                                        <li>Ekonomi Sirkular</li>
+                                        <li>Kebijakan Lingkungan</li>
+                                        <li>Teknologi Kelautan</li>
+                                        <li>Pertanian Berkelanjutan</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Health & Biotech -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHealth">
+                                    4. Kesehatan & Biotech (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseHealth" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Teknologi Medis</li>
+                                        <li>Farmasi Modern</li>
+                                        <li>Bioteknologi</li>
+                                        <li>Kesehatan Digital</li>
+                                        <li>Gizi & Dietetika</li>
+                                        <li>Biomedis</li>
+                                        <li>Kesehatan Masyarakat</li>
+                                        <li>Genetika</li>
+                                        <li>Neuroteknologi</li>
+                                        <li>Teknologi Laboratorium</li>
+                                        <li>Manajemen Rumah Sakit</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social & Humanities -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoc">
+                                    5. Sosial & Humaniora (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseSoc" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Psikologi Industri</li>
+                                        <li>Komunikasi Digital</li>
+                                        <li>Pengembangan Masyarakat</li>
+                                        <li>Hubungan Internasional</li>
+                                        <li>Sosiologi Digital</li>
+                                        <li>Antropologi Budaya</li>
+                                        <li>Filsafat Teknologi</li>
+                                        <li>Studi Perdamaian</li>
+                                        <li>Manajemen Konflik</li>
+                                        <li>Kebijakan Sosial</li>
+                                        <li>Filantropi Digital</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEdu">
+                                    6. Pendidikan (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseEdu" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Teknologi Pendidikan</li>
+                                        <li>Manajemen Sekolah</li>
+                                        <li>Pengembangan Kurikulum</li>
+                                        <li>Pendidikan Inklusif</li>
+                                        <li>E-learning</li>
+                                        <li>Psikologi Pendidikan</li>
+                                        <li>Pendidikan Karakter</li>
+                                        <li>Literasi Digital</li>
+                                        <li>Pendidikan Vokasi</li>
+                                        <li>Pendidikan Lingkungan</li>
+                                        <li>Manajemen Talent</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Arts & Creative -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArt">
+                                    7. Seni & Kreatif (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseArt" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Desain Digital</li>
+                                        <li>Animasi</li>
+                                        <li>Game Design</li>
+                                        <li>Musik Digital</li>
+                                        <li>Film & Media</li>
+                                        <li>Seni Rupa Digital</li>
+                                        <li>Creative Writing</li>
+                                        <li>Desain Produk</li>
+                                        <li>Fashion Tech</li>
+                                        <li>Arsitektur Digital</li>
+                                        <li>Seni Pertunjukan</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Law & Policy -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaw">
+                                    8. Hukum & Kebijakan (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseLaw" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Hukum Teknologi</li>
+                                        <li>Kebijakan Digital</li>
+                                        <li>Hukum Bisnis</li>
+                                        <li>Hukum Internasional</li>
+                                        <li>Cyber Law</li>
+                                        <li>Hukum Kesehatan</li>
+                                        <li>Hukum Lingkungan</li>
+                                        <li>Kebijakan Publik</li>
+                                        <li>Hukum Hak Cipta</li>
+                                        <li>Hukum Keuangan</li>
+                                        <li>Mediasi & Arbitrase</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Defense & Security -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDefense">
+                                    9. Pertahanan & Keamanan (11 jalur)
+                                </button>
+                            </h2>
+                            <div id="collapseDefense" class="accordion-collapse collapse" data-bs-parent="#pathAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Keamanan Siber</li>
+                                        <li>Intelijen Strategis</li>
+                                        <li>Manajemen Bencana</li>
+                                        <li>Keamanan Maritim</li>
+                                        <li>Teknologi Pertahanan</li>
+                                        <li>Diplomasi Keamanan</li>
+                                        <li>Forensik Digital</li>
+                                        <li>Manajemen Krisis</li>
+                                        <li>Keamanan Energi</li>
+                                        <li>Keamanan Pangan</li>
+                                        <li>Anti-Terorisme</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Sistem Karir</h3>
+                    <div class="card mb-4">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0">Struktur Karir per Lembaga</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Lembaga</th>
+                                            <th>Pemula</th>
+                                            <th>Menengah</th>
+                                            <th>Ahli</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lembaga Negara</td>
+                                            <td>Staf Junior (100 cita/bulan)</td>
+                                            <td>Koordinator (250 cita/bulan)</td>
+                                            <td>Kepala Divisi (500 cita/bulan)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organisasi Swasta</td>
+                                            <td>Volunteer (50 cita/bulan)</td>
+                                            <td>Project Officer (150 cita/bulan)</td>
+                                            <td>Program Director (350 cita/bulan)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Perusahaan</td>
+                                            <td>Intern (75 cita/bulan)</td>
+                                            <td>Specialist (200 cita/bulan)</td>
+                                            <td>Senior Manager (450 cita/bulan)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0">Persyaratan Promosi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Keahlian</h6>
+                                            <ul>
+                                                <li>Minimal 3 study path terkait</li>
+                                                <li>Level kompetensi sesuai jenjang</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Reputasi</h6>
+                                            <ul>
+                                                <li>Minimal 100 poin untuk Menengah</li>
+                                                <li>Minimal 300 poin untuk Ahli</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>Proyek</h6>
+                                            <ul>
+                                                <li>Menyelesaikan 2 proyek kecil (untuk Menengah)</li>
+                                                <li>Memimpin 1 proyek besar (untuk Ahli)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Konten Pembelajaran</h3>
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Struktur Modul Pembelajaran</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Maritim</h6>
+                                    <ol>
+                                        <li>Dasar Navigasi</li>
+                                        <li>Manajemen Pelabuhan</li>
+                                        <li>Teknologi Kapal</li>
+                                        <li>Logistik Maritim</li>
+                                        <li>Kebijakan Kelautan</li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Energi Hijau</h6>
+                                    <ol>
+                                        <li>Dasar Energi Terbarukan</li>
+                                        <li>Teknologi Solar</li>
+                                        <li>Manajemen Grid</li>
+                                        <li>Kebijakan Energi</li>
+                                        <li>Ekonomi Hijau</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Sistem Institusi</h3>
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">9 Kampus & Lembaga Afiliasi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-header">
+                                            <h6>Negeri</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Nusantara (Teknologi)</li>
+                                                <li>Dwipantara (Bisnis)</li>
+                                                <li>Giri Samudra (Maritim)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-header">
+                                            <h6>Swasta Yayasan</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Rimba Hijau (Lingkungan)</li>
+                                                <li>Laut Biru (Kelautan)</li>
+                                                <li>Gunung Megah (Pertanian)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-header">
+                                            <h6>Swasta Perusahaan</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Logika (AI & Digital)</li>
+                                                <li>Etika (Hukum)</li>
+                                                <li>Estetika (Seni)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Ekonomi Game</h3>
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0">Sistem Donasi & Monetisasi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Konversi Koin</h6>
+                                    <ul>
+                                        <li>Rp 10.000 = 5 koin</li>
+                                        <li>Maksimal Rp 200.000/minggu (100 koin)</li>
+                                    </ul>
+                                    <h6 class="mt-3">Penggunaan Koin</h6>
+                                    <ul>
+                                        <li>Hanya untuk kosmetik & customisasi</li>
+                                        <li>Tidak mempengaruhi progres game</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mermaid">
+                                        sequenceDiagram
+                                            User->>System: Pilih jumlah donasi
+                                            System->>Payment: Verifikasi pembayaran
+                                            Payment-->>System: Konfirmasi sukses
+                                            System->>User: Berikan koin
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Profil Pengguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Statistik:</h6>
+                        <p>Level: 5 | XP: 1,250/2,000</p>
+                        <p>Jalur Aktif: Kecerdasan Buatan</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Pencapaian:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success">Pemula AI</span>
+                            <span class="badge bg-info">Aktif Minggu Ini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+</body>
+</html>

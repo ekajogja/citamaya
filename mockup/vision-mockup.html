@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitaMaya - Visi & Strategi</title>
+    <!-- Bootswatch Vapor Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <style>
+        .section-card {
+            margin-bottom: 2rem;
+        }
+        .mermaid {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Persistent Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">CITAMAYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mockups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vision-mockup.html">Visi</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <i class="bi bi-person-circle"></i> Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h1 class="mb-0">Visi Proyek CitaMaya</h1>
+            </div>
+            <div class="card-body">
+                <div class="section-card">
+                    <h2>Misi & Tujuan</h2>
+                    <p>Membangun platform pendidikan berbasis game yang:</p>
+                    <ul>
+                        <li>Menyediakan akses belajar alternatif bagi yang terkendala pendidikan formal</li>
+                        <li>Mengemas pembelajaran sebagai pengalaman game yang menyenangkan</li>
+                        <li>Menghubungkan kompetensi virtual dengan kesempatan karir nyata</li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h2>Filosofi Inti</h2>
+                    <p class="lead">"Belajar Tanpa Sadar Belajar" - Transformasi pembelajaran melalui:</p>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item">Sistem quest dengan materi edukasi terselubung</li>
+                        <li class="list-group-item">Progresi berbasis kompetensi riil</li>
+                        <li class="list-group-item">Interaksi sosial yang mendukung belajar</li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h2>Nilai Dasar</h2>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0">Inklusivitas</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Gratis untuk 72 jalur utama</li>
+                                <li>Akses web/PWA tanpa batas</li>
+                                <li>Fleksibel belajar lintas kampus</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Relevansi Industri</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>99 jalur dalam 9 bidang strategis:</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul>
+                                        <li>Teknologi (11 jalur)</li>
+                                        <li>Bisnis & Ekonomi (11 jalur)</li>
+                                        <li>Lingkungan & Energi (11 jalur)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul>
+                                        <li>Kesehatan & Biotech (11 jalur)</li>
+                                        <li>Sosial & Humaniora (11 jalur)</li>
+                                        <li>Pendidikan (11 jalur)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul>
+                                        <li>Seni & Kreatif (11 jalur)</li>
+                                        <li>Hukum & Kebijakan (11 jalur)</li>
+                                        <li>Pertahanan & Keamanan (11 jalur)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0">Ekonomi Game yang Sehat</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Monetisasi etis hanya untuk kosmetik & fitur non-esensial</li>
+                                <li>Batasan transaksi (100 koin/minggu)</li>
+                                <li>Sponsor edukasi tanpa iklan intrusif</li>
+                                <li>Anti pay-to-win - semua jalur bisa diselesaikan gratis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2>Rencana Rilis Beta</h2>
+                    <div class="mermaid">
+                        gantt
+                            title Timeline Rilis Beta
+                            dateFormat  YYYY-MM
+                            section Persiapan
+                            Penyelesaian Study Path : done, 2025-07, 3mo
+                            Career Path Minimal : active, 2025-08, 1mo
+                            section Beta Test
+                            Uji Terbatas : 2025-09, 2mo
+                            Peluncuran Publik : 2025-11, 1mo
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2>Komitmen Kualitas</h2>
+                    <div class="alert alert-primary">
+                        <h5>Konten Lengkap</h5>
+                        <ul>
+                            <li>99 Study Path tersedia sejak beta</li>
+                            <li>3 Career Path utama (Teknologi, Bisnis, Pendidikan)</li>
+                            <li>Sistem assessment dasar</li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-secondary">
+                        <h5>Model Berkelanjutan</h5>
+                        <ul>
+                            <li>Tim kecil 5-10 orang</li>
+                            <li>Biaya operasional < Rp 15jt/bulan</li>
+                            <li>Break-even target 12 bulan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2>Target Pengguna</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Profil Utama:</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Pekerja yang ingin upskill</li>
+                                        <li>Pencari kerja tanpa akses kampus</li>
+                                        <li>Pelajar non-formal</li>
+                                        <li>Umur 18-35 tahun</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Platform:</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Web-based dengan PWA mobile</li>
+                                        <li>Konten dari open course + kerjasama</li>
+                                        <li>Assessment AI via OpenRouter API</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2>Inspirasi & Komparasi Platform</h2>
+                    <div class="mermaid mb-4">
+                        flowchart TD
+                            A[Torn] -->|Gameplay MMORPG| B(CitaMaya)
+                            C[Duolingo] -->|Micro-assessment| B
+                            D[Codecademy] -->|Struktur Belajar| B 
+                            E[Discord] -->|Interaksi Komunitas| B
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Aspek</th>
+                                    <th>Torn</th>
+                                    <th>Duolingo</th>
+                                    <th>Codecademy</th>
+                                    <th>CitaMaya</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Game Mechanics</td>
+                                    <td>★★★★★</td>
+                                    <td>★★☆☆☆</td>
+                                    <td>★★☆☆☆</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr>
+                                    <td>Edu Structure</td>
+                                    <td>★☆☆☆☆</td>
+                                    <td>★★★★☆</td>
+                                    <td>★★★★★</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr>
+                                    <td>Career Path</td>
+                                    <td>★☆☆☆☆</td>
+                                    <td>★☆☆☆☆</td>
+                                    <td>★★★☆☆</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Profil Pengguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Statistik:</h6>
+                        <p>Level: 5 | XP: 1,250/2,000</p>
+                        <p>Jalur Aktif: Kecerdasan Buatan</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Pencapaian:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success">Pemula AI</span>
+                            <span class="badge bg-info">Aktif Minggu Ini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitaMaya - Progresi Karir</title>
+    <!-- Bootswatch Vapor Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <style>
+        .level-card.beginner {
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+            border: 2px solid var(--bs-primary);
+        }
+        .level-card.intermediate {
+            background-color: rgba(var(--bs-success-rgb), 0.1);
+            border: 2px solid var(--bs-success);
+        }
+        .level-card.expert {
+            background-color: rgba(var(--bs-danger-rgb), 0.1);
+            border: 2px solid var(--bs-danger);
+        }
+        .benefit-card {
+            border-left: 4px solid var(--bs-warning);
+        }
+    </style>
+</head>
+<body>
+    <!-- Persistent Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">CITAMAYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard-mockup.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="learning-path-mockup.html">Belajar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assessment-mockup.html">Assessment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="career-mockup.html">Karir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community-mockup.html">Komunitas</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <i class="bi bi-person-circle"></i> Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0">TEKNOLOGI - Nusatech</h2>
+            </div>
+            <div class="card-body">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="level-card beginner text-center p-3 rounded">
+                            <h5 class="level-title">Pemula</h5>
+                            <p class="text-muted">Gaji: 75 cita/bulan</p>
+                            <p>Staf Junior</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level-card intermediate text-center p-3 rounded">
+                            <h5 class="level-title">Menengah</h5>
+                            <p class="text-muted">Gaji: 200 cita/bulan</p>
+                            <p>Specialist</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level-card expert text-center p-3 rounded">
+                            <h5 class="level-title">Ahli</h5>
+                            <p class="text-muted">Gaji: 450 cita/bulan</p>
+                            <p>Senior Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Persyaratan Promosi ke Menengah:</h4>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="badge bg-success me-2">✓</span>
+                        <span>3 Study Path terkait (2/3 selesai)</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="badge bg-danger me-2">✗</span>
+                        <span>Level kompetensi 4 (Saat ini: 3)</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="badge bg-success me-2">✓</span>
+                        <span>Reputasi 100 poin (120 poin)</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="badge bg-danger me-2">✗</span>
+                        <span>Menyelesaikan 2 proyek kecil (1/2)</span>
+                    </li>
+                </ul>
+
+                <h4>Benefit Level Menengah:</h4>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="benefit-card p-3 bg-light rounded">
+                            <h6>Virtual:</h6>
+                            <ul>
+                                <li>Akses fasilitas eksklusif</li>
+                                <li>Hak voting di lembaga</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-card p-3 bg-light rounded">
+                            <h6>Dunia Nyata:</h6>
+                            <ul>
+                                <li>Rekomendasi kerja</li>
+                                <li>Akses pelatihan premium</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success" disabled>Ajukan Promosi</button>
+                    <p class="text-danger mt-2">Anda belum memenuhi semua persyaratan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Profil Pengguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Statistik:</h6>
+                        <p>Level: 5 | XP: 1,250/2,000</p>
+                        <p>Jalur Aktif: Kecerdasan Buatan</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Pencapaian:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success">Pemula AI</span>
+                            <span class="badge bg-info">Aktif Minggu Ini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitaMaya - Pembelajaran</title>
+    <!-- Bootswatch Vapor Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <style>
+        .video-placeholder {
+            background-color: var(--bs-dark);
+            color: white;
+        }
+        .module-dot.active {
+            background-color: var(--bs-success);
+        }
+        .module-dot.completed {
+            background-color: var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Persistent Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">CITAMAYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard-mockup.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="learning-path-mockup.html">Belajar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lesson-mockup.html">Pelajaran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="career-mockup.html">Karir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community-mockup.html">Komunitas</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <i class="bi bi-person-circle"></i> Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <div>
+                    <h4 class="mb-0">Kecerdasan Buatan - Modul 3: Neural Networks</h4>
+                    <small>Jalur: Teknologi | Level 3</small>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="progress me-3" style="width: 200px; height: 10px;">
+                        <div class="progress-bar bg-success" style="width: 65%"></div>
+                    </div>
+                    <span>65% selesai</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h2>Konsep Dasar Neural Network</h2>
+                <p>Neural network adalah sistem komputasi yang terinspirasi oleh jaringan saraf biologis.</p>
+                
+                <div class="video-placeholder ratio ratio-16x9 my-4 d-flex justify-content-center align-items-center">
+                    [Video Penjelasan Neural Networks]
+                </div>
+
+                <h3>1. Neuron</h3>
+                <p>Unit dasar yang menerima input, memproses, dan mengirim output ke neuron lain.</p>
+                
+                <h3>2. Layer</h3>
+                <p>Kumpulan neuron yang memproses informasi secara paralel:</p>
+                <ul>
+                    <li>Input layer - Menerima data mentah</li>
+                    <li>Hidden layer - Memproses fitur</li>
+                    <li>Output layer - Hasil prediksi</li>
+                </ul>
+
+                <div class="card bg-light mt-4">
+                    <div class="card-body">
+                        <h5>Referensi Tambahan:</h5>
+                        <ul>
+                            <li><a href="#">Paper: Deep Learning (2015)</a></li>
+                            <li><a href="#">Tutorial: Implementasi NN dengan Python</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="btn btn-primary">Simpan Progress</button>
+                    <button class="btn btn-success">Diskusi (3)</button>
+                    <button class="btn btn-warning">Lanjut ke Assessment</button>
+                </div>
+
+                <div class="d-flex justify-content-center gap-2 mt-4">
+                    <span class="module-dot completed"></span>
+                    <span class="module-dot completed"></span>
+                    <span class="module-dot active"></span>
+                    <span class="module-dot"></span>
+                    <span class="module-dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Profil Pengguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Statistik:</h6>
+                        <p>Level: 5 | XP: 1,250/2,000</p>
+                        <p>Jalur Aktif: Kecerdasan Buatan</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Pencapaian:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success">Pemula AI</span>
+                            <span class="badge bg-info">Aktif Minggu Ini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+    <script>
+        // Lesson functions
+        function saveProgress() {
+            console.log('Progress disimpan');
+        }
+    </script>
+</body>
+</html>

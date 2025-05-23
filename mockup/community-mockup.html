@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitaMaya - Komunitas</title>
+    <!-- Bootswatch Vapor Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <style>
+        .guild-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .guild-card.active {
+            border-left: 4px solid var(--bs-warning);
+        }
+        .thread-title {
+            color: var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Persistent Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">CITAMAYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard-mockup.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="learning-path-mockup.html">Belajar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assessment-mockup.html">Assessment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="career-mockup.html">Karir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="community-mockup.html">Komunitas</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <i class="bi bi-person-circle"></i> Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Guilds Sidebar -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Guild Saya</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                <div class="d-flex justify-content-between">
+                                    <strong>Nusatech</strong>
+                                    <span class="badge bg-info">128 online</span>
+                                </div>
+                                <small class="text-muted">Teknologi & Engineering</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <strong>AI Enthusiasts</strong>
+                                    <span class="badge bg-info">8 online</span>
+                                </div>
+                                <small class="text-muted">Komunitas AI</small>
+                            </a>
+                        </div>
+                        <button class="btn btn-warning w-100 mt-3">+ Buat Guild Baru</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Content -->
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Diskusi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Proyek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mentor</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h5 class="thread-title">Cara terbaik memulai belajar AI?</h5>
+                            <p class="text-muted small">Oleh: Budi - 2 jam lalu | 5 komentar</p>
+                            <p>Saya baru mulai belajar AI dan bingung harus mulai dari mana. Ada rekomendasi study path atau resource tambahan?</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="thread-title">Pengumuman: Hackathon AI bulan depan</h5>
+                            <p class="text-muted small">Oleh: Admin Nusatech - 1 hari lalu | 12 komentar</p>
+                            <p>Kami akan mengadakan hackathon AI dengan hadiah total 500 cita coin. Daftarkan tim Anda sekarang!</p>
+                        </div>
+
+                        <button class="btn btn-warning">+ Buat Post Baru</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Profil Pengguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" 
+                             style="width: 80px; height: 80px;">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Statistik:</h6>
+                        <p>Level: 5 | XP: 1,250/2,000</p>
+                        <p>Jalur Aktif: Kecerdasan Buatan</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6>Pencapaian:</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success">Pemula AI</span>
+                            <span class="badge bg-info">Aktif Minggu Ini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+    <script>
+        // Guild selection
+        document.querySelectorAll('.list-group-item-action').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.list-group-item-action').forEach(i => {
+                    i.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
