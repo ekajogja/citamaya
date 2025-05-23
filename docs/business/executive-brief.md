@@ -5,7 +5,10 @@
 **"Indie Edu-Game Studio"** yang menghadirkan:
 - Game RPG dengan mekanika belajar alami
 - Skala kecil berkelanjutan (5-10 tim inti)
-- Monetisasi etis tanpa kompromi kualitas
+- Monetisasi etis (batas 100 koin/minggu) tanpa kompromi kualitas:
+  * Hanya untuk kosmetik & fitur non-esensial
+  * Semua jalur belajar bisa diselesaikan gratis
+  * Sponsor edukasi non-intrusif
 
 ```mermaid
 graph LR

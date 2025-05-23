@@ -12,7 +12,7 @@ Platform belajar berbasis game dengan inspirasi:
    - Analisis kompetitif vs platform lain
    - Roadmap pengembangan
 
-2. **[Desain Game](docs/game-design.md)**  
+2. **[Desain Game](game-design.md)**  
    - 99 jalur belajar & karir  
    - Sistem assessment multimodal  
    - Mekanika text-based MMORPG

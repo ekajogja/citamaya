@@ -19,11 +19,16 @@ Membangun platform pendidikan berbasis game yang:
    - Fleksibel belajar lintas kampus
 
 2. **Relevansi Industri**:
-   - 99 jalur dalam 9 bidang strategis:
-     * Teknologi (AI, Robotika, IoT)
-     * Bisnis (Startup, Fintech, E-commerce)  
-     * Lingkungan (Energi Terbarukan, Konservasi)
-     * Kesehatan (Biotek, Teknologi Medis)
+   - 99 jalur dalam 9 bidang strategis (daftar lengkap lihat game-design.md):
+     * Teknologi (11 jalur): AI, Robotika, IoT, Blockchain, dll
+     * Bisnis & Ekonomi (11 jalur): Startup, Fintech, E-commerce, dll  
+     * Lingkungan & Energi (11 jalur): Energi Terbarukan, Konservasi, dll
+     * Kesehatan & Biotech (11 jalur): Bioteknologi, Teknologi Medis, dll
+     * Sosial & Humaniora (11 jalur): Psikologi Industri, Komunikasi Digital, dll
+     * Pendidikan (11 jalur): Teknologi Pendidikan, E-learning, dll
+     * Seni & Kreatif (11 jalur): Desain Digital, Game Design, dll
+     * Hukum & Kebijakan (11 jalur): Hukum Teknologi, Cyber Law, dll
+     * Pertahanan & Keamanan (11 jalur): Keamanan Siber, Intelijen Strategis, dll
    - Kurikulum dikembangkan dengan industri:
      * 9 lembaga mitra utama
      * Sertifikasi diakui pasar kerja
