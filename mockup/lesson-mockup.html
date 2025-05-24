@@ -11,6 +11,12 @@
             background-color: var(--bs-dark);
             color: white;
         }
+        .module-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
         .module-dot.active {
             background-color: var(--bs-success);
         }
@@ -69,8 +75,29 @@
                 </div>
             </div>
             <div class="card-body">
-                <h2>Konsep Dasar Neural Network</h2>
-                <p>Neural network adalah sistem komputasi yang terinspirasi oleh jaringan saraf biologis.</p>
+                <div class="card bg-dark text-white mb-4">
+                    <div class="card-header">
+                        <h2 class="mb-0">📜 Lore: Jaringan Pengetahuan</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="font-monospace">"Di Kerajaan CitaMaya, Neural Networks adalah jaringan pengetahuan kuno yang meniru cara para bijak saling berbagi ilmu. Setiap neuron adalah seorang ahli, dan setiap koneksi adalah pertukaran pengetahuan..."</p>
+                        <button class="btn btn-sm btn-outline-light mt-2" onclick="toggleLore()">Baca Penjelasan Modern</button>
+                    </div>
+                </div>
+
+                <div id="modernExplanation" class="mb-4" style="display:none">
+                    <h2>Konsep Dasar Neural Network</h2>
+                    <p>Neural network adalah sistem komputasi yang terinspirasi oleh jaringan saraf biologis.</p>
+                </div>
+
+                <div class="card mb-3 bg-primary text-white">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-bullseye"></i> <strong>Tujuan Pembelajaran:</strong> Memahami arsitektur dasar neural network</span>
+                            <span class="badge bg-warning text-dark">XP: 25</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="video-placeholder ratio ratio-16x9 my-4 d-flex justify-content-center align-items-center">
                     [Video Penjelasan Neural Networks]
@@ -104,11 +131,32 @@
                 </div>
 
                 <div class="d-flex justify-content-center gap-2 mt-4">
-                    <span class="module-dot completed"></span>
-                    <span class="module-dot completed"></span>
-                    <span class="module-dot active"></span>
-                    <span class="module-dot"></span>
-                    <span class="module-dot"></span>
+                    <div class="text-center">
+                        <div class="module-dot completed mb-1"></div>
+                        <small>Pengenalan</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="module-dot completed mb-1"></div>
+                        <small>ML Dasar</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="module-dot active mb-1"></div>
+                        <small>Neural Nets</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="module-dot mb-1"></div>
+                        <small>Vision</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="module-dot mb-1"></div>
+                        <small>Proyek</small>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3">
+                    <i class="bi bi-lightbulb"></i> <strong>Ingin mendalami?</strong> 
+                    <a href="#" class="alert-link">Pelajari implementasi praktis</a> atau 
+                    <a href="#" class="alert-link">tanyakan pada mentor</a>
                 </div>
             </div>
         </div>
@@ -155,6 +203,14 @@
         function saveProgress() {
             console.log('Progress disimpan');
         }
+
+        function toggleLore() {
+            const modern = document.getElementById('modernExplanation');
+            modern.style.display = modern.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Initialize with modern explanation hidden
+        document.getElementById('modernExplanation').style.display = 'none';
     </script>
 </body>
 </html>

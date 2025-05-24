@@ -7,15 +7,33 @@
     <!-- Bootswatch Vapor Theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
     <style>
+        .guild-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
         .guild-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border-left-color: var(--bs-warning);
         }
         .guild-card.active {
-            border-left: 4px solid var(--bs-warning);
+            border-left: 3px solid var(--bs-warning);
+            background-color: rgba(var(--bs-warning-rgb), 0.1);
         }
-        .thread-title {
-            color: var(--bs-primary);
+        .chat-message {
+            border-left: 3px solid var(--bs-primary);
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+        .message-header {
+            font-family: monospace;
+            color: var(--bs-success);
+        }
+        .guild-hall {
+            background-color: rgba(0,0,0,0.7);
+            border: 1px solid var(--bs-warning);
+            border-radius: 5px;
+            padding: 15px;
         }
     </style>
 </head>
@@ -64,14 +82,14 @@
                     </div>
                     <div class="card-body">
                         <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action active">
+                            <a href="#" class="list-group-item list-group-item-action active guild-card">
                                 <div class="d-flex justify-content-between">
                                     <strong>Nusatech</strong>
                                     <span class="badge bg-info">128 online</span>
                                 </div>
                                 <small class="text-muted">Teknologi & Engineering</small>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <a href="#" class="list-group-item list-group-item-action guild-card">
                                 <div class="d-flex justify-content-between">
                                     <strong>AI Enthusiasts</strong>
                                     <span class="badge bg-info">8 online</span>
@@ -80,6 +98,20 @@
                             </a>
                         </div>
                         <button class="btn btn-warning w-100 mt-3">+ Buat Guild Baru</button>
+
+                        <!-- Guild Hall Section -->
+                        <div class="guild-hall mt-4">
+                            <h6 class="text-warning">🏰 Markas Nusatech</h6>
+                            <div class="d-flex justify-content-between small mb-2">
+                                <span>Anggota: 450</span>
+                                <span>Level: 5</span>
+                            </div>
+                            <div class="progress mb-2" style="height: 5px;">
+                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                            </div>
+                            <p class="small">Reputasi: 1200/2000 ke Level 6</p>
+                            <button class="btn btn-sm btn-outline-warning w-100">Lihat Papan Pengumuman</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,19 +133,35 @@
                         </ul>
                     </div>
                     <div class="card-body">
-                        <div class="mb-4">
-                            <h5 class="thread-title">Cara terbaik memulai belajar AI?</h5>
-                            <p class="text-muted small">Oleh: Budi - 2 jam lalu | 5 komentar</p>
-                            <p>Saya baru mulai belajar AI dan bingung harus mulai dari mana. Ada rekomendasi study path atau resource tambahan?</p>
+                        <!-- Chat-style Discussion -->
+                        <div class="mb-4 chat-message">
+                            <div class="message-header d-flex justify-content-between">
+                                <span>[Budi] Level 3 - Pemula AI</span>
+                                <span class="text-muted">2 jam lalu</span>
+                            </div>
+                            <p class="mb-1">"Saya baru mulai belajar AI dan bingung harus mulai dari mana. Ada rekomendasi study path atau resource tambahan?"</p>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-sm btn-outline-primary me-2">👍 Bantu</button>
+                                <button class="btn btn-sm btn-outline-secondary">💬 5</button>
+                            </div>
                         </div>
 
-                        <div class="mb-4">
-                            <h5 class="thread-title">Pengumuman: Hackathon AI bulan depan</h5>
-                            <p class="text-muted small">Oleh: Admin Nusatech - 1 hari lalu | 12 komentar</p>
-                            <p>Kami akan mengadakan hackathon AI dengan hadiah total 500 cita coin. Daftarkan tim Anda sekarang!</p>
+                        <div class="mb-4 chat-message">
+                            <div class="message-header d-flex justify-content-between">
+                                <span class="text-warning">[Admin Nusatech] Level 10 - Ahli AI</span>
+                                <span class="text-muted">1 hari lalu</span>
+                            </div>
+                            <p class="mb-1">"PENGUMUMAN: Kami akan mengadakan hackathon AI dengan hadiah total 500 cita coin. Daftarkan tim Anda sekarang!"</p>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-sm btn-outline-success me-2">🎯 Ikuti</button>
+                                <button class="btn btn-sm btn-outline-secondary">💬 12</button>
+                            </div>
                         </div>
 
-                        <button class="btn btn-warning">+ Buat Post Baru</button>
+                        <div class="input-group mt-4">
+                            <input type="text" class="form-control" placeholder="Tulis pesan...">
+                            <button class="btn btn-warning">Kirim</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,12 +206,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
     <script>
         // Guild selection
-        document.querySelectorAll('.list-group-item-action').forEach(item => {
+        document.querySelectorAll('.guild-card').forEach(item => {
             item.addEventListener('click', function() {
-                document.querySelectorAll('.list-group-item-action').forEach(i => {
+                document.querySelectorAll('.guild-card').forEach(i => {
                     i.classList.remove('active');
                 });
                 this.classList.add('active');
+                // Update guild hall info based on selected guild
+                document.querySelector('.guild-hall h6').textContent = 
+                    `🏰 Markas ${this.querySelector('strong').textContent}`;
             });
         });
     </script>
