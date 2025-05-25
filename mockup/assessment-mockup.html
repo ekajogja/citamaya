@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CitaMaya - Assessment</title>
     <!-- Bootswatch Vapor Theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/vapor/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
     <style>
         .option.selected {
             border-color: var(--bs-primary);
@@ -46,10 +49,95 @@
                     <li class="nav-item">
                         <a class="nav-link" href="community-mockup.html">Komunitas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Indeks</a>
+                    </li>
                 </ul>
-                <div class="d-flex">
-                    <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <i class="bi bi-person-circle"></i> Profil
+                <div class="d-flex align-items-center">
+                    <!-- Notification Bell -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-primary position-relative" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifikasi Terbaru</h6></li>
+                            <li><a class="dropdown-item" href="#">Quest baru tersedia</a></li>
+                            <li><a class="dropdown-item" href="#">Teman mengirim pesan</a></li>
+                            <li><a class="dropdown-item" href="#">Event minggu ini</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Energy Status -->
+                    <div class="me-3 d-none d-lg-flex align-items-center" data-bs-toggle="tooltip" title="Status Energi: 75/100">
+                        <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+                        <div style="width: 100px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-warning" style="width: 75%"></div>
+                            </div>
+                            <small class="text-muted">75/100</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Level Display -->
+                    <span class="badge rounded-pill bg-warning me-2 d-none d-md-flex align-items-center" data-bs-toggle="tooltip" title="Level 5 (1250/2000 XP)">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <span>Lv.5</span>
+                    </span>
+                    
+                    <!-- Cita Coin Display -->
+                    <span class="d-flex align-items-center me-2 d-none d-md-flex" data-bs-toggle="tooltip" title="75 Cita Coin">
+                        <i class="bi bi-coin text-warning me-1"></i>
+                        <span class="fw-bold">75</span>
+                    </span>
+                    
+                    <!-- Profile Button with Mobile Badges -->
+                    <div class="dropdown">
+                        <button class="btn btn-warning me-2 position-relative" data-bs-toggle="dropdown" data-bs-toggle="tooltip" title="Profil Pengguna">
+                            <i class="bi bi-person-circle"></i>
+                            <!-- Mobile-only badges -->
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning d-md-none">
+                                Lv.5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <!-- Mobile-only status display -->
+                            <li class="d-block d-md-none px-3 py-2">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold">Level: 5</span>
+                                    <span class="badge bg-warning">XP: 1250/2000</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-coin text-warning me-2"></i>
+                                    <span class="fw-bold">Cita Coin: 75</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+                                    <div class="flex-grow-1">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                        </div>
+                                        <small>Energy: 75/100</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+                            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                            <li><a class="dropdown-item" href="#">Keluar</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Settings Button -->
+                    <button class="btn btn-secondary me-2 d-none d-md-block" data-bs-toggle="tooltip" title="Pengaturan">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                    
+                    <!-- Help Button -->
+                    <button class="btn btn-info d-none d-md-block" data-bs-toggle="tooltip" title="Bantuan">
+                        <i class="bi bi-question-circle"></i>
                     </button>
                 </div>
             </div>
@@ -136,11 +224,60 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Mockup Portal</a></li>
+                        <li><a href="vision-mockup.html" class="text-white">Visi & Strategi</a></li>
+                        <li><a href="game-design-mockup.html" class="text-white">Desain Game</a></li>
+                        <li><a href="executive-brief-mockup.html" class="text-white">Executive Brief</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Project Info -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Proyek CitaMaya</h5>
+                    <p>Platform edukasi berbasis game MMORPG untuk pengembangan kompetensi profesional.</p>
+                    <a href="https://github.com/ekajogja/citamaya" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-github"></i> GitHub Repository
+                    </a>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-md-4">
+                    <h5>Legal</h5>
+                    <p class="small">© 2025 CitaMaya Team<br>
+                    Konten tersedia di bawah lisensi Creative Commons Attribution 4.0</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-discord"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+
+    <!-- Initialize Tooltips -->
     <script>
+        // Initialize Bootstrap tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+
         function selectOption(option) {
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('selected');

@@ -45,10 +45,16 @@
                         <a class="nav-link" href="learning-path-mockup.html">Belajar</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="assessment-mockup.html">Assessment</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="career-mockup.html">Karir</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="community-mockup.html">Komunitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Indeks</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
@@ -299,15 +305,59 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Mockup Portal</a></li>
+                        <li><a href="vision-mockup.html" class="text-white">Visi & Strategi</a></li>
+                        <li><a href="game-design-mockup.html" class="text-white">Desain Game</a></li>
+                        <li><a href="executive-brief-mockup.html" class="text-white">Executive Brief</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Project Info -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Proyek CitaMaya</h5>
+                    <p>Platform edukasi berbasis game MMORPG untuk pengembangan kompetensi profesional.</p>
+                    <a href="https://github.com/ekajogja/citamaya" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-github"></i> GitHub Repository
+                    </a>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-md-4">
+                    <h5>Legal</h5>
+                    <p class="small">© 2025 CitaMaya Team<br>
+                    Konten tersedia di bawah lisensi Creative Commons Attribution 4.0</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-discord"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+
+    <!-- Initialize Tooltips -->
     <script>
-        // Navigation functionality
-        function navigate(page) {
-            console.log(`Navigasi ke ${page}`);
-        }
+        // Initialize Bootstrap tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
     </script>
 </body>
 </html>
